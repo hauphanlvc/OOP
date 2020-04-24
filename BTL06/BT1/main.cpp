@@ -8,5 +8,6 @@ int main()
 	b.Xuat();
 	c = a + b;
 	c.Xuat();
-	
+	d = a - b;
+	d.Xuat();
 }
