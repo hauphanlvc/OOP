@@ -20,7 +20,11 @@ void SP::Xuat()
 		if (fAo != 0)
 		{
 			if (fAo < 0)
-				cout << " - " << -fAo << "i" << endl;
+			{
+				if (fAo == -1) cout << "- i" << endl;
+				else
+					cout << " - " << -fAo << "i" << endl;
+			}
 			else
 				cout << fAo << "i" << endl;
 		}
@@ -31,7 +35,11 @@ void SP::Xuat()
 		if (fAo != 0)
 		{
 			if (fAo < 0)
-				cout << fThuc << " - " << -fAo << "i" << endl;
+			{
+				if (fAo == -1) cout << fThuc << "- i" << endl;
+				else
+					cout << fThuc << " - " << -fAo << "i" << endl;
+			}
 			else
 		{
 					if (fAo == 1)
@@ -44,11 +52,20 @@ void SP::Xuat()
 
 	}
 }
+/*
 SP SP::operator+(SP a)
 {
 	SP res;
 	res.fThuc = this->fThuc + a.fThuc;
 	res.fAo = this->fAo + a.fAo;
+	return res;
+}
+*/
+SP operator+(SP a, SP b)
+{
+	SP res;
+	res.fThuc = a.fThuc + b.fThuc;
+	res.fAo = a.fAo + b.fAo;
 	return res;
 }
 SP operator-(SP a, SP b)
@@ -58,4 +75,18 @@ SP operator-(SP a, SP b)
 	res.fAo = a.fAo - b.fAo;
 	return res;
 }
+SP::SP(int n)
+{
+	this->fThuc = (float) n;
+	this->fAo = 0;
+}
+/*
+SP SP::operator+(int n)
+{
+	SP res;
+	res.fThuc = this->fThuc +(float) n;
+	res.fAo = this->fAo;
+	return res;
+}
+*/
 
