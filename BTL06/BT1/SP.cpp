@@ -33,7 +33,12 @@ void SP::Xuat()
 			if (fAo < 0)
 				cout << fThuc << " - " << -fAo << "i" << endl;
 			else
-				cout << fThuc << " + " << fAo << "i" << endl;
+		{
+					if (fAo == 1)
+					cout << fThuc << " + i" << endl;
+					else
+						cout << fThuc << " + " << fAo << "i" << endl;
+		}
 		}
 		else cout << fThuc << endl;
 
