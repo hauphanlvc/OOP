@@ -1,0 +1,3 @@
+﻿  list.cpp
+C:\Users\hauph\source\repos\OOP\BTL06\list\list.cpp(153): warning C4715: 'List::Tim_truoc': not all control paths return a value
+  list.vcxproj -> C:\Users\hauph\source\repos\OOP\BTL06\Debug\list.exe
