@@ -7,6 +7,9 @@ int main()
 	DT a, b;
 	a.Nhap();
 	a.Xuat();
+	int x;
+	cout << "Nhap x = "; cin >> x;
+	a.Tinh(x);
 	b.Nhap();
 	b.Xuat();
 	

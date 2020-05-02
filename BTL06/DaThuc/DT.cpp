@@ -100,6 +100,7 @@ DT operator-(DT a, DT b)
 }
 void DT::Tinh(int x)
 {
+	
 	int Tong = 0;
 	for (int i = 0; i <= this->n; i++)
 		if (Heso[i] != 0) Tong =Tong +  Heso[i] * pow(x, i);

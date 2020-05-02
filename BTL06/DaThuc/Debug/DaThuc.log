@@ -1,2 +1,5 @@
-﻿  main.cpp
+﻿  DT.cpp
+C:\Users\hauph\Source\Repos\OOP\BTL06\DaThuc\DT.cpp(106,32): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
   DaThuc.vcxproj -> C:\Users\hauph\source\repos\OOP\BTL06\Debug\DaThuc.exe
