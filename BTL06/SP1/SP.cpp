@@ -7,37 +7,39 @@ SP::SP(float newfThuc, float newfAo)
 	this->fAo = newfAo;
 }
 SP::~SP() {}
-void SP::Nhap()
+istream& operator>>(istream& is, SP& a)
 {
-	cout << "Nhap Phan thuc = "; cin >> this->fThuc;
-	cout << "Nhap Phan ao = "; cin >> this->fAo;
+	cout << "Nhap Phan thuc = "; is >> a.fThuc;
+	cout << "Nhap Phan ao = "; cin >> a.fAo;
+	return is;
 
 }
-void SP::Xuat()
+ostream& operator<<(ostream& os, SP a)
 {
-	if (fThuc == 0)
+	if (a.fThuc == 0)
 	{
-		if (fAo != 0)
+		if (a.fAo != 0)
 		{
-			if (fAo < 0)
-				cout << " - " << -fAo << "i" << endl;
+			if (a.fAo < 0)
+				 os << " - " << -a.fAo << "i" << endl;
 			else
-				cout << fAo << "i" << endl;
+				os << a.fAo << "i" << endl;
 		}
-		else cout << "0" << endl;
+		else os << "0" << endl;
 	}
 	else
 	{
-		if (fAo != 0)
+		if (a.fAo != 0)
 		{
-			if (fAo < 0)
-				cout << fThuc << " - " << -fAo << "i" << endl;
+			if (a.fAo < 0)
+				os << a.fThuc << " - " << -a.fAo << "i" << endl;
 			else
-				cout << fThuc << " + " << fAo << "i" << endl;
+				os << a.fThuc << " + " << a.fAo << "i" << endl;
 		}
-		else cout << fThuc << endl;
+		else os << a.fThuc << endl;
 
 	}
+	return os;
 }
 SP SP::operator+(SP a)
 {

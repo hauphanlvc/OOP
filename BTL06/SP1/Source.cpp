@@ -1,13 +1,10 @@
 #include"SP.h"
 int main()
 {
-	SP a, b, c, d;
-	a.Nhap();
-	a.Xuat();
-	b.Nhap();
-	b.Xuat();
+	SP a, b, c;
+	cin >> a >> b;
 	c = a + b;
-	c.Xuat();
-	d = a - b;
-	d.Xuat();
+	cout << c<<endl;
+	c = a - b;
+	cout << c;
 }
